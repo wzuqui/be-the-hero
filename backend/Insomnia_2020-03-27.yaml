@@ -1,0 +1,262 @@
+_type: export
+__export_format: 4
+__export_date: 2020-03-27T04:55:47.157Z
+__export_source: insomnia.desktop.app:v7.1.1
+resources:
+  - _id: req_5adf1c98215a48689a29ce4cd7c514ac
+    authentication: {}
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"id": "8b892b2b"
+        }
+    created: 1585102473645
+    description: ""
+    headers:
+      - id: pair_b7327597f24e47049bf07ba24c111a58
+        name: Content-Type
+        value: application/json
+    isPrivate: false
+    metaSortKey: -1585101591288.5
+    method: POST
+    modified: 1585102597202
+    name: Login
+    parameters: []
+    parentId: wrk_c0447b9d3a954258af4eab0c9f40ba49
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingFollowRedirects: global
+    settingRebuildPath: true
+    settingSendCookies: true
+    settingStoreCookies: true
+    url: http://localhost:3333/sessions
+    _type: request
+  - _id: wrk_c0447b9d3a954258af4eab0c9f40ba49
+    created: 1585098588170
+    description: ""
+    modified: 1585098588170
+    name: Semana OmniStack 11.0
+    parentId: null
+    _type: workspace
+  - _id: req_0e9997ecf0824db3bbfc3b2adf5296f7
+    authentication: {}
+    body: {}
+    created: 1585102138405
+    description: ""
+    headers:
+      - description: ""
+        disabled: false
+        id: pair_fd917755f98141dbaa20e1bab520ae75
+        name: Authorization
+        value: 8b892b2b
+    isPrivate: false
+    metaSortKey: -1585101308494.25
+    method: GET
+    modified: 1585197546379
+    name: Profile
+    parameters: []
+    parentId: wrk_c0447b9d3a954258af4eab0c9f40ba49
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingFollowRedirects: global
+    settingRebuildPath: true
+    settingSendCookies: true
+    settingStoreCookies: true
+    url: http://localhost:3333/profile
+    _type: request
+  - _id: req_3e1bca48145b48f79b60df3fb3647e11
+    authentication: {}
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"title": "Caso teste",
+        	"description": "Detalhes do caso",
+        	"value": 120
+        }
+    created: 1585101044172
+    description: ""
+    headers:
+      - id: pair_3fa29d0596334c039b754b7725357701
+        name: Content-Type
+        value: application/json
+      - description: ""
+        id: pair_79bdfea0850f41279d7f672bbe71802a
+        name: Authorization
+        value: 8b892b2b
+    isPrivate: false
+    metaSortKey: -1585101044172
+    method: POST
+    modified: 1585198040047
+    name: Create
+    parameters: []
+    parentId: fld_f82ad5dd33134baa9361e5249a686228
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingFollowRedirects: global
+    settingRebuildPath: true
+    settingSendCookies: true
+    settingStoreCookies: true
+    url: http://localhost:3333/incidents
+    _type: request
+  - _id: fld_f82ad5dd33134baa9361e5249a686228
+    created: 1585101025700
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1585101025700
+    modified: 1585101025700
+    name: Casos
+    parentId: wrk_c0447b9d3a954258af4eab0c9f40ba49
+    _type: request_group
+  - _id: req_66e77174a601492fbb6536f41e322953
+    authentication: {}
+    body: {}
+    created: 1585101819226
+    description: ""
+    headers:
+      - description: ""
+        disabled: false
+        id: pair_79bdfea0850f41279d7f672bbe71802a
+        name: Authorization
+        value: 8b892b2b
+    isPrivate: false
+    metaSortKey: -1585100596111
+    method: DELETE
+    modified: 1585101874815
+    name: Delete
+    parameters: []
+    parentId: fld_f82ad5dd33134baa9361e5249a686228
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingFollowRedirects: global
+    settingRebuildPath: true
+    settingSendCookies: true
+    settingStoreCookies: true
+    url: http://localhost:3333/incidents/1
+    _type: request
+  - _id: req_4a24fdd4b4ea4754b939768695c55a09
+    authentication: {}
+    body: {}
+    created: 1585101514755
+    description: ""
+    headers: []
+    isPrivate: false
+    metaSortKey: -1585100148050
+    method: GET
+    modified: 1585199557298
+    name: List
+    parameters: []
+    parentId: fld_f82ad5dd33134baa9361e5249a686228
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingFollowRedirects: global
+    settingRebuildPath: true
+    settingSendCookies: true
+    settingStoreCookies: true
+    url: http://localhost:3333/incidents
+    _type: request
+  - _id: req_f83bcc9503854126b95aa692a6f79b44
+    authentication: {}
+    body: {}
+    created: 1585196661995
+    description: ""
+    headers: []
+    isPrivate: false
+    metaSortKey: -1585196661995
+    method: DELETE
+    modified: 1585196766107
+    name: Delete
+    parameters: []
+    parentId: fld_e31baf36cc8a442392b45781433ce993
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingFollowRedirects: global
+    settingRebuildPath: true
+    settingSendCookies: true
+    settingStoreCookies: true
+    url: http://localhost:3333/ongs/76e34613
+    _type: request
+  - _id: fld_e31baf36cc8a442392b45781433ce993
+    created: 1585099244865
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1585099244865
+    modified: 1585099244865
+    name: Ongs
+    parentId: wrk_c0447b9d3a954258af4eab0c9f40ba49
+    _type: request_group
+  - _id: req_e414ed00199f4e2fbef9d0a56b9ab92a
+    authentication: {}
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name": "APAD2",
+        	"email": "contato@apad.com.br",
+        	"whatsapp": "4700000000",
+        	"city": "Rio do Sul",
+        	"uf": "SC"
+        }
+    created: 1585099251928
+    description: ""
+    headers:
+      - id: pair_bc79184240ff4342b8c47c054802eefc
+        name: Content-Type
+        value: application/json
+    isPrivate: false
+    metaSortKey: -1585099251928
+    method: POST
+    modified: 1585100664985
+    name: Create
+    parameters: []
+    parentId: fld_e31baf36cc8a442392b45781433ce993
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingFollowRedirects: global
+    settingRebuildPath: true
+    settingSendCookies: true
+    settingStoreCookies: true
+    url: http://localhost:3333/ongs
+    _type: request
+  - _id: req_610cc5001b2c49e8ba6c64b80ee1bc08
+    authentication: {}
+    body: {}
+    created: 1585100335211
+    description: ""
+    headers: []
+    isPrivate: false
+    metaSortKey: -1585099251878
+    method: GET
+    modified: 1585100344203
+    name: List
+    parameters: []
+    parentId: fld_e31baf36cc8a442392b45781433ce993
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingFollowRedirects: global
+    settingRebuildPath: true
+    settingSendCookies: true
+    settingStoreCookies: true
+    url: http://localhost:3333/ongs
+    _type: request
+  - _id: env_7b4b3517f5658a9f742b8e6f04f90c30fc077f25
+    color: null
+    created: 1585098588205
+    data: {}
+    dataPropertyOrder: null
+    isPrivate: false
+    metaSortKey: 1585098588206
+    modified: 1585098588205
+    name: Base Environment
+    parentId: wrk_c0447b9d3a954258af4eab0c9f40ba49
+    _type: environment
+  - _id: jar_7b4b3517f5658a9f742b8e6f04f90c30fc077f25
+    cookies: []
+    created: 1585098588217
+    modified: 1585098588217
+    name: Default Jar
+    parentId: wrk_c0447b9d3a954258af4eab0c9f40ba49
+    _type: cookie_jar
