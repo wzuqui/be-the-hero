@@ -1,29 +1,26 @@
-// Update with your config settings.
-
-module.exports = {
+export default {
   development: {
     client: 'sqlite3',
     connection: {
-      filename: './src/database/db.sqlite'
+      filename: 'db.sqlite'
     },
     migrations: {
-      directory: './src/database/migrations'
+      directory: 'migrations',
+      extension: 'ts'
     },
     useNullAsDefault: true
   },
 
   staging: {
-    client: 'postgresql',
+    client: 'mysql',
     connection: {
-      database: 'my_db',
-      user: 'username',
-      password: 'password'
-    },
-    pool: {
-      min: 2,
-      max: 10
+      host: 'remotemysql.com',
+      database: '5tGD0YKoPx',
+      user: '5tGD0YKoPx',
+      password: 'XxrF6CHfY9'
     },
     migrations: {
+      directory: 'migrations',
       tableName: 'knex_migrations'
     }
   },

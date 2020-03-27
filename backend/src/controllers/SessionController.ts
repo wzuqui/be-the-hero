@@ -1,7 +1,8 @@
-const connection = require('../database/connection');
+import express from 'express';
+import connection from '../database/connection';
 
-module.exports = {
-  async create(request, response) {
+export default {
+  async create(request: express.Request, response: express.Response) {
     const { id } = request.body;
 
     const ong = await connection('ongs')

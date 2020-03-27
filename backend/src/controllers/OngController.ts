@@ -1,14 +1,15 @@
-const connection = require('../database/connection');
-const crypto = require('crypto');
+import * as crypto from 'crypto';
+import * as express from 'express';
+import connection from '../database/connection';
 
-module.exports = {
-  async index(request, response) {
+export default {
+  async index(request: express.Request, response: express.Response) {
     const ongs = await connection('ongs').select('*');
 
     return response.json(ongs);
   },
 
-  async create(request, response) {
+  async create(request: express.Request, response: express.Response) {
     const { name, email, whatsapp, city, uf } = request.body;
 
     const id = crypto.randomBytes(4).toString('HEX');
@@ -27,7 +28,7 @@ module.exports = {
     });
   },
 
-  async delete(request, response) {
+  async delete(request: express.Request, response: express.Response) {
     const { id } = request.params;
 
     await connection('ongs')

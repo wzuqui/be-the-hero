@@ -1,7 +1,8 @@
-const connection = require('../database/connection');
+import express from 'express';
+import connection from '../database/connection';
 
-module.exports = {
-  async index(request, response) {
+export default {
+  async index(request: express.Request, response: express.Response) {
     const { page = 1 } = request.query;
 
     const [count] = await connection('incidents').count();
@@ -24,7 +25,7 @@ module.exports = {
     return response.json(incidents);
   },
 
-  async create(request, response) {
+  async create(request: express.Request, response: express.Response) {
     const { title, description, value } = request.body;
     const ong_id = request.headers.authorization;
 
@@ -40,7 +41,7 @@ module.exports = {
     });
   },
 
-  async delete(request, response) {
+  async delete(request: express.Request, response: express.Response) {
     const { id } = request.params;
     const ong_id = request.headers.authorization;
 

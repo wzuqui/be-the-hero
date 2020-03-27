@@ -1,9 +1,9 @@
-const express = require('express');
+import * as express from 'express';
 
-const OngController = require('./controllers/OngController');
-const IncidentController = require('./controllers/IncidentController');
-const ProfileController = require('./controllers/ProfileController');
-const SessionController = require('./controllers/SessionController');
+import OngController from './controllers/OngController';
+import IncidentController from './controllers/IncidentController';
+import ProfileController from './controllers/ProfileController';
+import SessionController from './controllers/SessionController';
 
 const routes = express.Router();
 
@@ -19,4 +19,4 @@ routes.get('/incidents', IncidentController.index);
 routes.post('/incidents', IncidentController.create);
 routes.delete('/incidents/:id', IncidentController.delete);
 
-module.exports = routes;
+export default routes;

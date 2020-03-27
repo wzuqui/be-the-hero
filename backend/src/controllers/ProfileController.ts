@@ -1,7 +1,8 @@
-const connection = require('../database/connection');
+import express from 'express';
+import connection from '../database/connection';
 
-module.exports = {
-  async index(request, response) {
+export default {
+  async index(request: express.Request, response: express.Response) {
     const ong_id = request.headers.authorization;
 
     const incidents = await connection('incidents')
