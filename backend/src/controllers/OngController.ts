@@ -1,4 +1,4 @@
-import * as crypto from 'crypto';
+import { v4 as uuidv4 } from 'uuid';
 import * as express from 'express';
 import connection from '../database/connection';
 
@@ -12,7 +12,7 @@ export default {
   async create(request: express.Request, response: express.Response) {
     const { name, email, whatsapp, city, uf } = request.body;
 
-    const id = crypto.randomBytes(4).toString('HEX');
+    const id = uuidv4();
 
     await connection('ongs').insert({
       id,
